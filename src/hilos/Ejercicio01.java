@@ -3,11 +3,13 @@ package hilos;
 public class Ejercicio01 {
 	
 	public static void main(String[] args) {
-//		Thread hilo1 = new HilosNumeros();
-//		Thread hilo2 = new HilosNumeros();
-//		hilo1.start();hilo2.start();
-		for (int i = 0; i < 1000; i++) 
-			new HilosNumeros().start();
+		Thread hilo1 = new HilosNumeros();
+		Thread hilo2 = new HilosNumeros();
+		hilo1.setPriority(Thread.MAX_PRIORITY);
+		hilo2.setPriority(Thread.MIN_PRIORITY);
+		hilo2.start();
+//		for (int i = 0; i < 1000; i++) 
+//			new HilosNumeros().start();
 		System.out.println("Fin del hilo " 
 		+ Thread.currentThread().getName());
 
