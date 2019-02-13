@@ -1,6 +1,6 @@
 package hilos;
 
-public class Ejericicio02 {
+public class Ejercicio02 {
 
 	public static void main(String[] args) {
 
